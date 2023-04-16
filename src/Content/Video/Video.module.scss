@@ -1,0 +1,86 @@
+.wrapper {
+    width: 100%;
+    height: 622.22px;
+    max-width: 350px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #666;
+    border-radius: 12px;
+    overflow: hidden;
+    .video {
+        object-fit: cover;
+        height: auto;
+        width: 100%;
+        // border-radius: 12px;
+    }
+    .actions {
+        position: absolute;
+        width: 100%;
+        padding: 0 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        bottom: 33px;
+
+        font-size: 2.2rem;
+        color: #fff;
+        .play-button {
+        }
+        .pause-button {
+        }
+        .audio {
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                background-color: transparent;
+                width: 20px;
+                height: 20px;
+
+                bottom: 20px;
+                right: 6px;
+            }
+            .volumes-icon {
+            }
+            .volume-range {
+                display: none;
+                position: absolute;
+                width: 21px;
+                height: 64px;
+                cursor: initial;
+                background-color: rgba(22, 24, 35, 0.34);
+                border-radius: 32px;
+                bottom: 36px;
+                left: 2px;
+
+                input {
+                    width: 46px;
+                    height: 2px;
+
+                    position: absolute;
+                    transform: rotate(-90deg);
+                    left: -12px;
+                    bottom: 30px;
+
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    &::-webkit-slider-thumb {
+                        -webkit-appearance: none;
+                        width: 12px;
+                        height: 12px;
+                        background-color: #fff;
+                        border-radius: 50%;
+                        cursor: pointer;
+                    }
+                }
+            }
+            &:hover {
+                .volume-range {
+                    display: block;
+                }
+            }
+        }
+    }
+}
