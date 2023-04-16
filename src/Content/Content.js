@@ -1,6 +1,6 @@
 import classNames from 'classnames/bind';
 import React from 'react';
-import { useEffect, useState, useRef, useCallback } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
 import InfiniteScroll from 'react-infinite-scroll-component';
 
@@ -15,13 +15,12 @@ import {
 } from 'react-js-pull-to-refresh';
 
 const cx = classNames.bind(styles);
-const INIT_PAGE = 1;
 function Content({ ...props }) {
     const [content, setContent] = useState([]);
 
     const [pagination, setPagination] = useState(2);
     const [hasMore, setHasMore] = useState(true);
-    const [firstFetching, setFirstFetching] = useState(true);
+    // const [firstFetching, setFirstFetching] = useState(true);
     const listInnerRef = useRef();
 
     const fetchApi = async () => {
@@ -65,16 +64,12 @@ function Content({ ...props }) {
                     >
                         {content.map((item, index) => (
                             <div className={cx('post-block')} key={index}>
-                                <div className={cx('account')}>
-                                    <div className={cx('info-block')}>
-                                        <div className={cx('video-block')}>
-                                            <Video
-                                                description={item.description}
-                                                src={item.file_url}
-                                                index={index}
-                                            />
-                                        </div>
-                                    </div>
+                                <div className={cx('video-block')}>
+                                    <Video
+                                        description={item.description}
+                                        src={item.file_url}
+                                        index={index}
+                                    />
                                 </div>
                             </div>
                         ))}

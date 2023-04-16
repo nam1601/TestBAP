@@ -9,59 +9,31 @@
         justify-content: center;
 
         border-bottom: 2px solid rgba(99, 99, 102, 0.2);
-        .account {
+
+        .video-block {
+            margin-top: 20px;
             margin: 24px 8px 12px 8px;
             display: flex;
-            // align-items: center;
+            justify-content: center;
+            position: relative;
 
-            .info-block {
-                width: 100%;
-                .info {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    .name {
-                        display: flex;
+            .interactives {
+                display: flex;
+                height: 100%;
+                flex-direction: column;
+                align-self: end;
+
+                padding: 8px 0;
+                margin-left: 20px;
+
+                .action-block {
+                    margin-bottom: 8px;
+                    .icon {
+                        font-size: 2.4rem;
+                    }
+                    .quantity {
                         text-align: center;
-
-                        .nick-name {
-                            margin-right: 4px;
-                        }
-                        p {
-                            display: flex;
-                            align-items: center;
-                            font-size: 1.6rem;
-                        }
-                    }
-                    .follow-btn {
-                        height: 28px;
-                    }
-                }
-                .video-block {
-                    margin-top: 20px;
-                    display: flex;
-                    justify-content: center;
-                    position: relative;
-
-                    .interactives {
-                        display: flex;
-                        height: 100%;
-                        flex-direction: column;
-                        align-self: end;
-
-                        padding: 8px 0;
-                        margin-left: 20px;
-
-                        .action-block {
-                            margin-bottom: 8px;
-                            .icon {
-                                font-size: 2.4rem;
-                            }
-                            .quantity {
-                                text-align: center;
-                                font-size: 1.5rem;
-                            }
-                        }
+                        font-size: 1.5rem;
                     }
                 }
             }
